@@ -4,6 +4,7 @@
 #include <atomic>
 #include <cstddef>
 #include <type_traits>
+#include <new>
 
 template<typename T, size_t Capacity>
 class RingBuffer {
