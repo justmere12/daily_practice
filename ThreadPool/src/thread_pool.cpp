@@ -1,7 +1,7 @@
 #include "thread_pool.h"
 #include <iostream>
 
-ThreadPool::ThreadPool(size_t threads)
+ThreadPool::ThreadPool(size_t threads) : running_(true)
 {
     if (threads == 0) {
         threads = std::thread::hardware_concurrency();

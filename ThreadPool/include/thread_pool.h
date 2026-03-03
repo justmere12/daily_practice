@@ -51,7 +51,7 @@ private:
     std::atomic<size_t> active_tasks_ {0};
 };
 
-inline ThreadPool::ThreadPool(ThreadPool&& other) noexcept
+inline ThreadPool::ThreadPool(ThreadPool&& other) noexcept : running_(false)
 {
     transferFrom(std::move(other));
 }
